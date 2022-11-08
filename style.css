@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.full_grid_container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "top_left top_mid top_right"
+    "bot_left bot_mid bot_right";
+  gap: 10px;
+}
+
+/* top left start */
+.top_left_container {
+  grid-area: top_left;
+  display: grid;
+  grid-template-areas:
+    "courrier courrier"
+    "skype contacts";
+  gap: 10px;
+}
+#courrier {
+  grid-area: courrier;
+  background-color: #708090;
+}
+#skype {
+  grid-area: skype;
+  background-color: #4169e1;
+}
+#contacts {
+  grid-area: contacts;
+  background-color: #ff0000;
+}
+/* top left end */
+
+/* top mid start */
+.top_mid_container {
+  grid-area: top_mid;
+  display: grid;
+  grid-template-areas:
+    "calendrier"
+    "bourse";
+  gap: 10px;
+}
+#calendrier {
+  grid-area: calendrier;
+  background-color: #800080;
+}
+#bourse {
+  grid-area: bourse;
+  background-color: #32cd32;
+}
+/* top mid end */
+
+/* top right start */
+.top_right_container {
+  grid-area: top_right;
+  display: grid;
+  grid-template-areas:
+    "photos top_right_grid"
+    "explorer aide";
+  gap: 10px;
+}
+#photos {
+  grid-area: photos;
+  background-color: #2e8b57;
+}
+/* 1 2 3 4 grid start */
+#top_right_grid {
+  grid-area: top_right_grid;
+  display: grid;
+  width: auto;
+  height: auto;
+  grid-template-areas:
+    "small_box_1 small_box_2"
+    "small_box_3 small_box_4";
+  gap: 10px;
+}
+#small_box_1 {
+  grid-area: small_box_1;
+  background-color: #ff0000;
+}
+#small_box_2 {
+  grid-area: small_box_2;
+  background-color: #ffa500;
+}
+#small_box_3 {
+  grid-area: small_box_3;
+  background-color: #32cd32;
+}
+#small_box_4 {
+  grid-area: small_box_4;
+  background-color: #000080;
+}
+/* 1 2 3 4 grid end */
+#explorer {
+  grid-area: explorer;
+  background-color: #4169e1;
+}
+#aide {
+  grid-area: aide;
+  background-color: #ff0000;
+}
+/* top right end */
+
+/* bot left start */
+.bot_left_container {
+  grid-area: bot_left;
+  display: grid;
+  grid-template-areas:
+    "liste_lecture drive"
+    "bureau bureau";
+  gap: 10px;
+}
+#liste_lecture {
+  grid-area: liste_lecture;
+  background-color: #ff0000;
+}
+#drive {
+  grid-area: drive;
+  background-color: #4169e1;
+}
+#bureau {
+  grid-area: bureau;
+  background-color: #32cd32;
+}
+
+/* bot left end */
+
+/* bot mid start EMPTY */
+.bot_mid_container {
+  grid-area: bot_mid;
+  display: grid;
+}
+/* bot mid end */
+
+/* bot right start */
+.bot_right_container {
+  grid-area: bot_right;
+  display: grid;
+  grid-template-areas:
+    "cartes sante"
+    "actu actu";
+  gap: 10px;
+}
+#cartes {
+  grid-area: cartes;
+  background-color: #800080;
+}
+#sante {
+  grid-area: sante;
+  background-color: #ff0000;
+}
+#actu {
+  grid-area: actu;
+  background-color: #800080;
+}
+/* bot right end */
